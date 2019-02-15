@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import com.crashlytics.android.Crashlytics
 import io.fabric.sdk.android.Fabric
+import com.crashlytics.android.ndk.CrashlyticsNdk
 
 class CrashActivity : Activity() {
 
