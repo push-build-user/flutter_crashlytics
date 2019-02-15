@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_crashlytics/flutter_crashlytics.dart';
+import 'package:pushstrength_flutter_crashlytics/pushstrength_flutter_crashlytics.dart';
 
 void main() async {
   bool isInDebugMode = false;
