@@ -10,7 +10,7 @@ class CrashActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         super.onCreate(savedInstanceState)
-        Fabric.with(this, Crashlytics())
+        Fabric.with(this, Crashlytics(), CrashlyticsNdk())
 
         throw intent.getSerializableExtra("exception") as Throwable
     }
