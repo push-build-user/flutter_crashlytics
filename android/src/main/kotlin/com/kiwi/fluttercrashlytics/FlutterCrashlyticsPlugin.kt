@@ -11,6 +11,7 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
+import com.crashlytics.android.ndk.CrashlyticsNdk
 
 class FlutterCrashlyticsPlugin(private val context: Context) : MethodCallHandler {
     companion object {
@@ -24,7 +25,7 @@ class FlutterCrashlyticsPlugin(private val context: Context) : MethodCallHandler
     override fun onMethodCall(call: MethodCall, result: Result) {
         when (call.method) {
             "initialize" -> {
-                Fabric.with(context, Crashlytics())
+                Fabric.with(context, Crashlytics(), CrashlyticsNdk())
 
                 result.success(null)
             }
